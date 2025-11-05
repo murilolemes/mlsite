@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  allowedDevOrigins: [
+    'local-origin.dev',
+    '*.local-origin.dev'
+  ],
+  compiler: {
+    styledComponents: true,
+  }
 };
 
-export default nextConfig;
+module.exports = nextConfig;
