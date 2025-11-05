@@ -21,7 +21,7 @@ export default function Home() {
           <p>
             Formado em Ciência da Computação na Universidade Paulista (UNIP) e
             atualmente estou em busca de aprofundar meus conhecimentos nas
-            tecnologias "ReactJS, JavaScript, TypeScript, HTML e CSS".
+            tecnologias {`"ReactJS, JavaScript, TypeScript, HTML e CSS"`}.
           </p>
           <p>
             Estou sempre tentando ser melhor que ontem, gosto de enfrentar
