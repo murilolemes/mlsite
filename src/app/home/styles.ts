@@ -20,6 +20,11 @@ const Content = styled.div`
 export const PageContent = styled(Content)`
   justify-content: center;
   align-items: center;
+  
+  @media(max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 `;
 
 export const PageDescription = styled.div`
@@ -42,10 +47,23 @@ export const PageDescription = styled.div`
       margin-top: 1rem;
     }
   }
+
+  @media(max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+      text-align: justify;
+    }
+
+    p {
+      font-weight: 400;
+      text-align: justify;
+    }
+  }
 `
 
 export const PageProfile = styled.div`
-  width: 25rem;
+  width: 100%;
+  max-width: 25rem;
   height: 20rem;
 
   border: 1px solid var(--gray-500);
@@ -93,6 +111,11 @@ export const PageProfile = styled.div`
       transition: 0.5s;
     }
   }
+
+  @media(max-width: 768px) {
+    max-width: 100%;
+    padding: 1rem;
+  }
 `;
 
 export const ProfileImage = styled.div`
@@ -120,26 +143,7 @@ export const PageRepositories = styled(Content)`
     color: var(--purple-400);
   }
 
-  button {
-    margin: 0 auto;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-
-    background: var(--foreground);
-    color: var(--purple-500);
-    border: 2px solid var(--purple-500);
-
-    font-size: 0.875rem;
-    font-weight: 500;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-      background: var(--purple-500);
-      color: var(--foreground);
-      transition: 0.2s;
-    }
+  @media(max-width: 768px) {
+    font-size: 2rem;
   }
 `

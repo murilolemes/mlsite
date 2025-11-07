@@ -15,11 +15,18 @@ export const CertificateContainer = styled.main`
     font-weight: 400;
     color: var(--purple-400);
   }
+
+  @media(max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
 `;
 
 export const CertificateContent = styled.div`
   width: 100%;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(calc(20rem - 32px), 1fr));
@@ -27,18 +34,25 @@ export const CertificateContent = styled.div`
 `;
 
 export const CertificateItem = styled.div`
-  background: var(--gray-100);
+  background: var(--gray-700);
+  border: 1px solid var(--gray-500);
   border-radius: 10px;
   overflow: hidden;
+
+  transition: 0.5s;
 
   display: flex;
   flex-direction: column;
 
-  
- img {
+  img {
     width: 100%;
     height: auto;
     object-fit: contain;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: var(--gray-300);
   }
 `;
 
@@ -54,7 +68,7 @@ export const CertificateDetails = styled.div`
   p {
     font-size: var(--font-sm);
     font-weight: 500;
-    color: var(--gray-900);
+    color: var(--gray-100);
     
     &:first-child {
       font-weight: 600;

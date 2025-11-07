@@ -6,14 +6,15 @@ export const CardContainer = styled.div`
   width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(calc(20rem - 32px), 1fr));
   gap: 1rem;
 
   padding: 1rem 0 0.5rem 0;
 `;
 
 export const CardContent = styled.div`
-  min-width: 24rem;
+  width: 100%;
+  max-width: 30rem;
   height: 14rem;
 
   background: var(--gray-700);

@@ -58,7 +58,6 @@ export default function Home() {
       <PageRepositories>
         <h2>Acesse meus repositórios</h2>
         <Repositories />
-        <button>Ver todos os repositórios</button>
       </PageRepositories>
     </PageContainer>
   )
