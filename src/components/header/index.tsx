@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <Logo href={"/"}>
+        <Logo href="/">
           <LogoML />
         </Logo>
         <Nav>
