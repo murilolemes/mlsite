@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "Murilo Lemes",
   description: "Site portfólio de Murilo Lemes",
   icons: {
-    icon: "/logoML.svg",
+    icon: "/assets/logoML.svg",
   },
 };
 
