@@ -3,6 +3,8 @@
 import { usePathname } from "next/navigation";
 import { HeaderContainer, HeaderContent, Logo, Nav, NavLink } from "./styles";
 
+import LogoML from "@/assets/logoML.svg";
+
 export default function Header() {
   const pathName = usePathname();
 
@@ -14,8 +16,8 @@ export default function Header() {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <Logo>
-          <h1>ML</h1>
+        <Logo href={"/"}>
+          <LogoML />
         </Logo>
         <Nav>
           {links.map(link => {
@@ -24,7 +26,7 @@ export default function Header() {
               <NavLink
                 key={link.href}
                 href={link.href}
-                active={isActive}
+                isactive={isActive}
               >
                 {link.label}
               </NavLink>

@@ -1,7 +1,9 @@
 "use client";
 
+import { apiGitHub } from "@/services/api";
 import { EnvelopeSimpleIcon, GithubLogoIcon, MapPinIcon } from "@phosphor-icons/react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import Repositories from "./components/cards";
 import {
   PageContainer,
@@ -12,7 +14,24 @@ import {
   ProfileImage
 } from "./styles";
 
+interface GitHubProps {
+  avatar_url: string;
+}
+
 export default function Home() {
+  const [gitHubImage, setGitHubImage] = useState<GitHubProps>({} as GitHubProps);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await apiGitHub.get<GitHubProps>('/users/murilolemes');
+      setGitHubImage(response.data);
+      setLoading(false);
+    }
+
+    fetchData();
+  }, [])
+
   return (
     <PageContainer>
       <PageContent>
@@ -40,7 +59,7 @@ export default function Home() {
           </p>
         </PageDescription>
         <PageProfile>
-          <ProfileImage />
+          <ProfileImage isloading={loading} imageurl={gitHubImage.avatar_url} />
           <p>
             <MapPinIcon size={14} />
             Olímpia - SP

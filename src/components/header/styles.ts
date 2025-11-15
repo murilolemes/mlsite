@@ -17,27 +17,35 @@ export const HeaderContainer = styled.header`
   top: 0;
   left: 0;
   z-index: 10;
-  `
+`
 
 export const HeaderContent = styled.div`
   width: 100%;
   max-width: 1232px;
+  height: 100%;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  `
+`
 
-export const Logo = styled.div`
-  h1 {
-    font-weight: 400;
+export const Logo = styled(Link)`
+  height: 100%;
+  padding: 0.5rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  svg {
+    height: calc(100% - 0.25rem);
   }
 `
 
 interface LinksProps {
-  active: boolean;
+  isactive: boolean;
 }
 
 export const Nav = styled.nav`
@@ -47,10 +55,12 @@ export const Nav = styled.nav`
   gap: 1rem;
 `
 
-export const NavLink = styled(Link) <LinksProps>`
-  color: ${({ active }) => active ? 'var(--purple-400)' : 'var(--gray-300)'};
-  font-weight: ${({ active }) => active ? '700' : '400'};
-  border-bottom: ${({ active }) => active ? '1px solid var(--purple-400)' : 'none'};
+export const NavLink = styled(Link).withConfig({
+  shouldForwardProp: (prop) => !["isactive"].includes(prop)
+}) <LinksProps>`
+  color: ${({ isactive }) => isactive ? 'var(--purple-400)' : 'var(--gray-300)'};
+  font-weight: ${({ isactive }) => isactive ? '700' : '400'};
+  border-bottom: ${({ isactive }) => isactive ? '1px solid var(--purple-400)' : 'none'};
 
   &:hover {
     color: var(--purple-400);

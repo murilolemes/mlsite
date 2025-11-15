@@ -1,15 +1,47 @@
 "use client"
 
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
 
-export const CardContainer = styled.div`
+interface CardContainerProps {
+  isloading: boolean;
+}
+
+export const CardContainer = styled.div.withConfig({
+  shouldForwardProp: (prop) => !["isloading"].includes(prop)
+}) <CardContainerProps>`
   width: 100%;
+  padding: 1rem 0;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(20rem - 32px), 1fr));
-  gap: 1rem;
+  ${({ isloading }) => (isloading
+    ? css`
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    ` : css`
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(calc(20rem - 32px), 1fr));
+      gap: 1rem;
+    `
+  )}
 
-  padding: 1rem 0 0.5rem 0;
+  svg {
+    ${({ isloading }) => (isloading
+    ? css`
+      display: initial;
+      animation: spin 3s linear infinite;
+      `
+    : css`
+        display: none;
+      `
+  )}
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 `;
 
 export const CardContent = styled.div`
@@ -38,10 +70,18 @@ export const CardContent = styled.div`
       font-weight: 400;
     }
 
-    button {
-      width: 14px;
-      height: 14px;
-      font-size: 10px;
+    a {
+      width: 1rem;
+      height: 1rem;
+      border: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        display: initial;
+      }
     }
   }
 

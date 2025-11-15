@@ -1,6 +1,6 @@
 "use client"
 
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
 
 export const PageContainer = styled.main`
   width: 100%;
@@ -118,7 +118,14 @@ export const PageProfile = styled.div`
   }
 `;
 
-export const ProfileImage = styled.div`
+interface ProfileImageProps {
+  imageurl: string;
+  isloading: boolean;
+}
+
+export const ProfileImage = styled.div.withConfig({
+  shouldForwardProp: (prop) => !["isloading", "imgageUrl"].includes(prop)
+}) <ProfileImageProps>`
   width: 8rem;
   height: 8rem;
 
@@ -126,9 +133,32 @@ export const ProfileImage = styled.div`
   box-shadow: 0 0 0 3px var(--purple-500);
   margin-bottom: 1rem;
 
-  background-image: url('https://images.unsplash.com/photo-1731951039706-0e793240bb32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NTc5MjI3NzJ8MA&ixlib=rb-4.1.0&q=80&w=400');
-  background-size: cover;
-  background-position: center;
+  ${({ isloading, imageurl }) => (isloading
+    ? css`
+      background: linear-gradient(
+        90deg, 
+        #1E2939 25%, 
+        #364153 50%, 
+        #1E2939 75%
+      );
+      background-size: 200% 100%;
+      animation: shimmer 2s infinite;
+    `
+    : css`
+      background-image: url(${imageurl});
+      background-size: cover;
+      background-position: center;
+    `
+  )}
+  
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
 `;
 
 export const PageRepositories = styled(Content)`
