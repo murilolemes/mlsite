@@ -16,9 +16,19 @@ export default function Header() {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <Logo href="/">
-          <LogoML />
-        </Logo>
+        {links
+          .filter(link => link.label === "Home")
+          .map(link => {
+            const isActive = pathName === link.href
+            return (
+              <Logo
+                key={link.href}
+                href={link.href}
+              >
+                <LogoML />
+              </Logo>
+            )
+          })}
         <Nav>
           {links.map(link => {
             const isActive = pathName === link.href
