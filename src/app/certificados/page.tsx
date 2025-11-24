@@ -1,19 +1,19 @@
 "use client";
 
-import bdModelagem from "@/../public/assets/bdModelagem.jpg";
-import bdRelacional from "@/../public/assets/bdRelacional.jpg";
-import bdRelacionamento from "@/../public/assets/bdRelacionamento.jpg";
-import csharpAlgoritimos from "@/../public/assets/csharpAlgoritmos.jpg";
-import csharpEstruturaDados from "@/../public/assets/csharpEstruturaDados.jpg";
-import csharpGerenciamentoNuGet from "@/../public/assets/csharpGerenciamentoNuGet.jpg";
-import csharpLinq from "@/../public/assets/csharpLinq.jpg";
-import csharpOrientadoObjeto from "@/../public/assets/csharpOrientadoObjeto.jpg";
-import gitFundamentos from "@/../public/assets/gitFundamentos.jpg";
-import goStack from "@/../public/assets/gostack.jpg";
-import nestFundamentos from "@/../public/assets/nestFundamentos.jpg";
-import nodeJs from "@/../public/assets/nodeJs.jpg";
-import reactJs from "@/../public/assets/reactJs.jpg";
-import scrum from "@/../public/assets/scrum.jpg";
+import bdModelagem from "../../../public/assets/bdModelagem.jpg";
+import bdRelacional from "../../../public/assets/bdRelacional.jpg";
+import bdRelacionamento from "../../../public/assets/bdRelacionamento.jpg";
+import csharpAlgoritimos from "../../../public/assets/csharpAlgoritmos.jpg";
+import csharpEstruturaDados from "../../../public/assets/csharpEstruturaDados.jpg";
+import csharpGerenciamentoNuGet from "../../../public/assets/csharpGerenciamentoNuGet.jpg";
+import csharpLinq from "../../../public/assets/csharpLinq.jpg";
+import csharpOrientadoObjeto from "../../../public/assets/csharpOrientadoObjeto.jpg";
+import gitFundamentos from "../../../public/assets/gitFundamentos.jpg";
+import goStack from "../../../public/assets/gostack.jpg";
+import nestFundamentos from "../../../public/assets/nestFundamentos.jpg";
+import nodeJs from "../../../public/assets/nodeJs.jpg";
+import reactJs from "../../../public/assets/reactJs.jpg";
+import scrum from "../../../public/assets/scrum.jpg";
 
 
 import Image from "next/image";
