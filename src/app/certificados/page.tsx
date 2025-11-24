@@ -1,19 +1,19 @@
 "use client";
 
-import bdModelagem from "../../../public/assets/bdModelagem.jpg";
-import bdRelacional from "../../../public/assets/bdRelacional.jpg";
-import bdRelacionamento from "../../../public/assets/bdRelacionamento.jpg";
-import csharpAlgoritimos from "../../../public/assets/csharpAlgoritmos.jpg";
-import csharpEstruturaDados from "../../../public/assets/csharpEstruturaDados.jpg";
-import csharpGerenciamentoNuGet from "../../../public/assets/csharpGerenciamentoNuGet.jpg";
-import csharpLinq from "../../../public/assets/csharpLinq.jpg";
-import csharpOrientadoObjeto from "../../../public/assets/csharpOrientadoObjeto.jpg";
-import gitFundamentos from "../../../public/assets/gitFundamentos.jpg";
-import goStack from "../../../public/assets/gostack.jpg";
-import nestFundamentos from "../../../public/assets/nestFundamentos.jpg";
-import nodeJs from "../../../public/assets/nodeJs.jpg";
-import reactJs from "../../../public/assets/reactJs.jpg";
-import scrum from "../../../public/assets/scrum.jpg";
+// import bdModelagem from "";
+// import bdRelacional from "";
+// import bdRelacionamento from "";
+// import csharpAlgoritimos from "";
+// import csharpEstruturaDados from "";
+// import csharpGerenciamentoNuGet from "";
+// import csharpLinq from "";
+// import csharpOrientadoObjeto from "";
+// import gitFundamentos from "";
+// import goStack from "";
+// import nestFundamentos from "";
+// import nodeJs from "";
+// import reactJs from "";
+// import scrum from "";
 
 
 import Image from "next/image";
@@ -24,85 +24,85 @@ const certificates = [
     training: "Modelagem de Banco de dados",
     institution: "TREINAWEB",
     conclusion: "Setembro de 2025",
-    image: bdModelagem,
+    image: "../../../public/assets/bdModelagem.jpg",
   },
   {
     training: "Banco de dados Relacional",
     institution: "TREINAWEB",
     conclusion: "Outubro de 2025",
-    image: bdRelacional,
+    image: "../../../public/assets/bdRelacional.jpg",
   },
   {
     training: "Banco de dados - Entidade e Relacionamento",
     institution: "TREINAWEB",
     conclusion: "Setembro de 2025",
-    image: bdRelacionamento,
+    image: "../../../public/assets/bdRelacionamento.jpg",
   },
   {
     training: "C# - Algoritmos",
     institution: "TREINAWEB",
     conclusion: "junho de 2025",
-    image: csharpAlgoritimos,
+    image: "../../../public/assets/csharpAlgoritmos.jpg",
   },
   {
     training: "C# - Estrutura de Dados e Collections",
     institution: "TREINAWEB",
     conclusion: "Junho de 2025",
-    image: csharpEstruturaDados,
+    image: "../../../public/assets/csharpEstruturaDados.jpg",
   },
   {
     training: "C# - Gerenciamento de Pacotes com NuGet",
     institution: "TREINAWEB",
     conclusion: "Julho de 2025",
-    image: csharpGerenciamentoNuGet,
+    image: "../../../public/assets/csharpGerenciamentoNuGet.jpg",
   },
   {
     training: "C# - Linq",
     institution: "TREINAWEB",
     conclusion: "Julho de 2025",
-    image: csharpLinq,
+    image: "../../../public/assets/csharpLinq.jpg",
   },
   {
     training: "C# - Orientação a Objetos",
     institution: "TREINAWEB",
     conclusion: "Junho de 2025",
-    image: csharpOrientadoObjeto,
+    image: "../../../public/assets/csharpOrientadoObjeto.jpg",
   },
   {
     training: "Git - Fundamentos",
     institution: "TREINAWEB",
     conclusion: "Agosto de 2025",
-    image: gitFundamentos,
+    image: "../../../public/assets/gitFundamentos.jpg",
   },
   {
     training: "Bootcamp GoStack",
     institution: "ROCKETSEAT",
     conclusion: "Outubro de 2020",
-    image: goStack,
+    image: "../../../public/assets/gostack.jpg",
   },
   {
     training: "Nest.js - Fundamentos",
     institution: "TREINAWEB",
     conclusion: "Setembro de 2025",
-    image: nestFundamentos,
+    image: "../../../public/assets/nestFundamentos.jpg",
   },
   {
     training: "Node.js",
     institution: "ALURA",
     conclusion: "Agosto de 2019",
-    image: nodeJs,
+    image: "../../../public/assets/nodeJs.jpg",
   },
   {
     training: "React",
     institution: "ALURA",
     conclusion: "Setembro de 2019",
-    image: reactJs,
+    image: "../../../public/assets/reactJs.jpg",
   },
   {
     training: "Scrum - Planejamento e Desenvolvimento Ágil",
     institution: "TREINAWEB",
     conclusion: "Outubro de 2025",
-    image: scrum,
+    image: "../../../public/assets/scrum.jpg",
   },
 ];
 
