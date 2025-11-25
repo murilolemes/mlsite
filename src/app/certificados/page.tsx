@@ -1,21 +1,5 @@
 "use client";
 
-// import bdModelagem from "";
-// import bdRelacional from "";
-// import bdRelacionamento from "";
-// import csharpAlgoritimos from "";
-// import csharpEstruturaDados from "";
-// import csharpGerenciamentoNuGet from "";
-// import csharpLinq from "";
-// import csharpOrientadoObjeto from "";
-// import gitFundamentos from "";
-// import goStack from "";
-// import nestFundamentos from "";
-// import nodeJs from "";
-// import reactJs from "";
-// import scrum from "";
-
-
 import Image from "next/image";
 import { CertificateContainer, CertificateContent, CertificateDetails, CertificateItem } from "./styles";
 
@@ -114,7 +98,7 @@ export default function Certificates() {
       <CertificateContent>
         {certificates.map((cert, index) => (
           <CertificateItem key={index}>
-            <Image src={cert.image} alt={cert.training} width={286} height={202} />
+            <Image src={cert.image} width={286} height={202} alt={cert.training} />
             <CertificateDetails>
               <p><span>Curso:</span> {cert.training}</p>
               <p><span>Instituição:</span> {cert.institution}</p>
