@@ -1,6 +1,6 @@
 "use client"
 
-import { css, styled } from "styled-components";
+import styled, { css } from "styled-components";
 
 interface CardContainerProps {
   isloading: boolean;

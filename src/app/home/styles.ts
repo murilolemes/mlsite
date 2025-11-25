@@ -1,6 +1,6 @@
 "use client"
 
-import { css, styled } from "styled-components";
+import styled, { css } from "styled-components";
 
 export const PageContainer = styled.main`
   width: 100%;

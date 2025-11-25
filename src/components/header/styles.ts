@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   width: 100%;
