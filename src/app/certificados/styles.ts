@@ -1,6 +1,6 @@
 "use client"
 
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const CertificateContainer = styled.main`
   height: 100%;  
