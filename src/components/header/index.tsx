@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { HeaderContainer, HeaderContent, Logo, Nav, NavLink } from "./styles";
 
-import LogoML from "/public/assets/logoML.svg";
+import Image from "next/image";
 
 export default function Header() {
   const pathName = usePathname();
@@ -25,7 +25,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
               >
-                <LogoML />
+                <Image src="/assets/logoML.svg" alt="Logo ML" width={64} height={64} />
               </Logo>
             )
           })}

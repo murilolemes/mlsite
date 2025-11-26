@@ -39,7 +39,7 @@ export const Logo = styled(Link)`
   align-items: center;
   justify-content: center;
   
-  svg {
+  img {
     height: calc(100% - 0.25rem);
   }
 `
