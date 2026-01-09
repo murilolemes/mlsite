@@ -25,7 +25,7 @@ export const CardContainer = styled.div.withConfig({
     `
   )}
 
-  svg {
+  .spinner {
     ${({ isloading }) => (isloading
     ? css`
       display: initial;
@@ -78,10 +78,6 @@ export const CardContent = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-
-      svg {
-        display: initial;
-      }
     }
   }
 
