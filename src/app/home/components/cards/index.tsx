@@ -47,11 +47,11 @@ export default function Repositories() {
             <div className="inf">
               <span />
               <p>{repositorie.language}</p>
-              <p>
+              <p className={repositorie.stargazers_count > 0 ? 'starred' : ''}>
                 <StarIcon size={14} weight="bold" />
                 {repositorie.stargazers_count}
               </p>
-              <p>
+              <p className={repositorie.forks > 0 ? 'forked' : ''}>
                 <GitForkIcon size={14} weight="bold" />
                 {repositorie.forks}
               </p>

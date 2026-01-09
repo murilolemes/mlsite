@@ -125,6 +125,23 @@ export const CardFooter = styled.div`
       & + p {
         margin-left: 1rem;
       }
+
+    }
+
+    .starred {
+      svg {
+        color: var(--yellow-500);
+      }
+
+      color: var(--gray-100);
+    }
+
+    .forked {
+      svg {
+        color: var(--green-500);
+      }
+
+      color: var(--gray-100);
     }
   }
 
