@@ -1,4 +1,6 @@
 import Header from '@/components/header';
+import LinkedIn from "@/components/linkedin";
+import WhatsApp from "@/components/whatsapp";
 import StyledComponentsRegistry from '@/lib/registro';
 import GlobalStyles from '@/styles/global-styles';
 import type { Metadata } from "next";
@@ -33,6 +35,8 @@ export default function RootLayout({
           <div id="content">
             {children}
           </div>
+          <LinkedIn />
+          <WhatsApp />
         </StyledComponentsRegistry>
       </body>
     </html>

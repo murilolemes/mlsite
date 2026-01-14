@@ -10,6 +10,8 @@ export const PageContainer = styled.main`
   align-items: center;
   flex-direction: column;
   gap: 6rem;
+
+  position: relative;
 `
 
 const Content = styled.div`

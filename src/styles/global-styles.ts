@@ -27,12 +27,15 @@ export default createGlobalStyle`
     --red-300: #ff3b30;
     --fighting: #C03028;
     
+    --green-900: #1ca700;
     --green-600: #a8a878;
     --green-500: #30d158;
     --green-300: #8aee71;
     --green-100: #49d0b0;
     
     
+    --blue-700: #005582;
+    --blue-500: #0077B5;
     --blue-300: #76befe;
     --blue-100: #98D8D8;
     
