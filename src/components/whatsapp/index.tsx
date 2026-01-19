@@ -4,7 +4,7 @@ import { WhatsappLogoIcon } from "@phosphor-icons/react";
 import { WhatsAppInButton } from "./styles";
 
 export default function WhatsApp() {
-  const message = 'Olá ML, tudo bem?'
+  const message = 'Olá Murilo Lemes, tudo bem?'
   const cell = '551799742-0235';
 
 
