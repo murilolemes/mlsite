@@ -5,6 +5,12 @@ import { CertificateContainer, CertificateContent, CertificateDetails, Certifica
 
 const certificates = [
   {
+    training: "Ciência da Computação",
+    institution: "UNIVERSIDADE PAULISTA - UNIP",
+    conclusion: "Junho de 2021",
+    image: "/assets/CienciaComp.jpg",
+  },
+  {
     training: "Modelagem de Banco de dados",
     institution: "TREINAWEB",
     conclusion: "Setembro de 2025",
