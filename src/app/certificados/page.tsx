@@ -94,6 +94,18 @@ const certificates = [
     conclusion: "Outubro de 2025",
     image: "/assets/scrum.jpg",
   },
+  {
+    training: "Node.js - Fundamentos",
+    institution: "TREINAWEB",
+    conclusion: "Março de 2026",
+    image: "/assets/nodeFundamentos.jpg",
+  },
+  {
+    training: "MySQL - Desenvolvedor",
+    institution: "TREINAWEB",
+    conclusion: "Fevereiro de 2026",
+    image: "/assets/mysqlDesenvolvedor.jpg",
+  },
 ];
 
 export default function Certificates() {
