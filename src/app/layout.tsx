@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={cn('font-sans', montserrat.variable)}>
-      <body className="bg-[url('/assets/background.jpg')] bg-cover bg-center bg-no-repeat">
+      <body className="bg-gray-950 bg-cover bg-center bg-no-repeat">
         <Header />
         <div
           className={cn(
