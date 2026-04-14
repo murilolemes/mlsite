@@ -120,4 +120,17 @@ export default createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
 `;
