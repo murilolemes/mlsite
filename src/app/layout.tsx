@@ -31,8 +31,8 @@ export default function RootLayout({
         <Header />
         <div
           className={cn(
-            'bg-background-acrilic mx-auto mt-[4.5rem] min-h-[calc(100vh-4.5rem)]',
-            'w-full max-w-[1232px] backdrop-blur-[4px] backdrop-saturate-100',
+            'bg-background-acrilic mx-auto mt-18 min-h-[calc(100vh-4.5rem)]',
+            'w-full max-w-[1232px] backdrop-blur-xs backdrop-saturate-100',
           )}
         >
           {children}

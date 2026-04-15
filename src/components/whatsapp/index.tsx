@@ -18,7 +18,7 @@ export default function WhatsApp() {
       aria-label="LinkedIn Profile"
       className={cn(
         'h-12 w-12 rounded-full border-none bg-green-500 text-gray-50',
-        'fixed right-[1rem] bottom-[5rem] flex items-center justify-center',
+        'fixed right-4 bottom-20 flex items-center justify-center',
         'transition-colors duration-200 hover:bg-green-500/80',
       )}
     >

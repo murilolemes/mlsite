@@ -139,9 +139,7 @@ export default function Certificates() {
               className={cn('h-auto w-full object-contain')}
             />
             <div
-              className={cn(
-                'flex min-h-[5rem] flex-col content-between gap-1 p-2',
-              )}
+              className={cn('flex min-h-20 flex-col content-between gap-1 p-2')}
             >
               <p className={cn('text-sm text-gray-300')}>
                 <span className={cn('text-sm font-bold text-gray-300')}>

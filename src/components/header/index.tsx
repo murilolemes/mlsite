@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 z-10 h-[4.5rem] w-full border-b border-gray-50/10',
+        'fixed top-0 left-0 z-10 h-18 w-full border-b border-gray-50/10',
         'bg-background-acrilic backdrop-blur-md backdrop-saturate-100 transition-all duration-300',
       )}
     >

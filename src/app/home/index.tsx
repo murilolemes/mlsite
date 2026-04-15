@@ -33,9 +33,7 @@ export default function Home() {
 
   return (
     <main
-      className={cn(
-        'relative flex w-full flex-col items-center gap-[6rem] p-4',
-      )}
+      className={cn('relative flex w-full flex-col items-center gap-24 p-4')}
     >
       {/* bio */}
       <div
@@ -72,7 +70,7 @@ export default function Home() {
         {/* Profile */}
         <div
           className={cn(
-            'h-[20rem] w-full max-w-[25rem]',
+            'h-80 w-full max-w-100',
             'flex flex-col items-center justify-between',
           )}
         >
@@ -81,7 +79,7 @@ export default function Home() {
             className={cn(
               'h-48 w-48 rounded-full shadow-[0_0_0_3px] shadow-purple-800',
               isLoading
-                ? 'animate-shimmer bg-[linear-gradient(90deg,#1E2939_25%,#364153_50%,#1E2939_75%)] bg-[length:200%_100%]'
+                ? 'animate-shimmer bg-[linear-gradient(90deg,#1E2939_25%,#364153_50%,#1E2939_75%)] bg-size-[200%_100%]'
                 : 'bg-cover bg-center',
             )}
             style={
