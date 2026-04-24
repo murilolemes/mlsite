@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function WhatsApp() {
   const message = 'Olá Murilo Lemes, tudo bem?';
-  const cell = '551799742-0235';
+  const cell = '551798215-2311';
 
   const apiWhats = `https://api.whatsapp.com/send?phone=${cell}&text=${message}`;
 
