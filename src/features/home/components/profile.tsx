@@ -15,7 +15,7 @@ export function Profile() {
   return (
     <div
       className={cn('flex h-[calc(100vh-190px)] w-full justify-center')}
-      id="/"
+      id="top"
     >
       <Content
         className={cn('relative flex-col justify-center gap-4 px-4 py-2')}

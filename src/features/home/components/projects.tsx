@@ -31,10 +31,22 @@ export function Project() {
               href={project.link}
               target="_blank"
               className={cn(
-                'flex w-105 flex-col gap-2 overflow-hidden rounded-2xl',
-                'shadow-[0_0_6px_1px_rgba(0,0,0,0.5)]',
+                'relative flex w-105 flex-col gap-2 overflow-hidden rounded-2xl',
+                'shadow-[0_0_6px_1px_rgba(0,0,0,0.5)] hover:border-1 hover:border-white/30',
               )}
             >
+              {project.desenv && (
+                <div
+                  className={cn(
+                    'absolute top-2 left-4 flex rounded-xl bg-white px-2',
+                    'border-1 border-red-500 py-1',
+                  )}
+                >
+                  <p className={cn('text-[8px] font-bold text-red-500')}>
+                    Em Desenvolvimento
+                  </p>
+                </div>
+              )}
               <Image
                 src={project.image}
                 width={420}

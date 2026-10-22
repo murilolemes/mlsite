@@ -27,7 +27,14 @@ export function Contact() {
               Vamos transformar sua ideia em realidade.
             </p>
           </div>
-          <ButtonWhatsApp bg="bg-blue-600" py="py-6" />
+          <ButtonWhatsApp
+            textColor="text-blue-500"
+            py="py-6"
+            bg="bg-transparent"
+            borderColor="border-blue-200"
+          >
+            Vamos conversar
+          </ButtonWhatsApp>
         </div>
       </Content>
     </div>

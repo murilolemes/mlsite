@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { ArrowRightIcon, WhatsappLogoIcon } from '@phosphor-icons/react';
+import { WhatsappLogoIcon } from '@phosphor-icons/react';
 import Link from 'next/link';
 
 const message = 'Olá Murilo Lemes, tudo bem?';
@@ -27,11 +27,20 @@ export function FloatingWhatsApp() {
   );
 }
 
-type ButtonWhatsAppProps = {
-  bg: string;
+type ButtonWhatsAppProps = Readonly<{
+  textColor: string;
   py: string;
-};
-export function ButtonWhatsApp({ bg, py }: ButtonWhatsAppProps) {
+  bg: string;
+  borderColor: string;
+  children: React.ReactNode;
+}>;
+export function ButtonWhatsApp({
+  textColor,
+  py,
+  bg,
+  borderColor,
+  children,
+}: ButtonWhatsAppProps) {
   return (
     <Link
       href={apiWhats}
@@ -39,13 +48,12 @@ export function ButtonWhatsApp({ bg, py }: ButtonWhatsAppProps) {
       rel="noopener noreferrer"
       aria-label="WhatsApp"
       className={cn(
-        `rounded-md ${bg} px-8 ${py} font-semibold text-white hover:text-blue-500`,
-        'flex items-center gap-2 border-1 border-white/20',
+        `rounded-md ${bg} px-8 ${py} font-semibold ${textColor}`,
+        `${borderColor} flex items-center gap-2 border-1`,
         'transition-all duration-200 hover:border-blue-500',
       )}
     >
-      Vamos conversar
-      <ArrowRightIcon weight="bold" size={24} />
+      {children}
     </Link>
   );
 }

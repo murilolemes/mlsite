@@ -6,6 +6,7 @@ type ProjectProps = {
   description: string;
   tecnology: string[];
   link: string;
+  desenv: boolean;
 };
 
 export const projects: ProjectProps[] = [
@@ -15,6 +16,7 @@ export const projects: ProjectProps[] = [
     description: 'Site de venda de celular',
     tecnology: ['Next.js', 'TailwindCSS', 'TypeScript'],
     link: 'https://mlcellimports.vercel.app/',
+    desenv: false,
   },
   {
     image: '/assets/mlcontrol.png',
@@ -22,6 +24,7 @@ export const projects: ProjectProps[] = [
     description: 'Site para controle financeiro',
     tecnology: ['Next.js', 'TailwindCSS', 'TypeScript'],
     link: 'https://mlcontrol.vercel.app/',
+    desenv: true,
   },
   {
     image: '/assets/fisio.png',
@@ -29,5 +32,6 @@ export const projects: ProjectProps[] = [
     description: 'Site de Pilates e Fisioterapia',
     tecnology: ['Next.js', 'TailwindCSS', 'TypeScript'],
     link: 'https://fisiolaragratao.netlify.app/',
+    desenv: true,
   },
 ];
