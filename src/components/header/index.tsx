@@ -60,25 +60,25 @@ export default function Header() {
     <header
       ref={headerRef}
       className={cn(
-        'h-18 w-full border-b-1 border-gray-50/10 transition-all duration-300',
+        'w-full border-b-1 border-gray-50/10 transition-all duration-300 md:h-18',
         'bg-background-acrilic/50 backdrop-blur-md backdrop-saturate-100',
       )}
     >
       <div
         className={cn(
-          'mx-auto flex h-full w-full max-w-[1232px] items-center justify-between px-4 py-2',
+          'mx-auto flex w-full max-w-[1232px] flex-wrap items-center justify-between gap-y-2 px-4 py-2 md:h-full md:flex-nowrap',
         )}
       >
-        {/* LOGO */}
         <Link
           href="/"
-          className={cn('flex h-full items-center justify-center py-2')}
+          className={cn('order-1 flex items-center justify-center md:py-2')}
         >
           <Image
             src="/assets/LogoInicial.png"
             alt="Logo ML"
             width={72}
             height={72}
+            className="h-12 w-12 md:h-[72px] md:w-[72px]"
           />
           <div
             className={cn(
@@ -93,8 +93,11 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* NAV */}
-        <nav className={cn('flex items-center gap-4')}>
+        <nav
+          className={cn(
+            'order-3 flex w-full items-center justify-between gap-x-1.5 text-[11px] whitespace-nowrap sm:text-sm md:order-2 md:w-auto md:justify-center md:gap-4 md:text-base',
+          )}
+        >
           {links.map((link) => {
             const isActive = pathName === '/' && activeHref === link.href;
 
@@ -114,13 +117,14 @@ export default function Header() {
         </nav>
 
         <ButtonWhatsApp
+          className="order-2 px-2 text-xs sm:px-3 md:order-3 md:px-8 md:text-base"
           bg="bg-transparent"
-          py="py-2"
+          py="py-1 md:py-2"
           textColor="text-white"
           borderColor="border-white/10"
         >
           Vamos conversar
-          <ArrowRightIcon weight="bold" size={24} />
+          <ArrowRightIcon weight="bold" size={18} />
         </ButtonWhatsApp>
       </div>
     </header>

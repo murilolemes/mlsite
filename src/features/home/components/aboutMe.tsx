@@ -17,8 +17,8 @@ export function AboutMe() {
           <Separator className={cn('!w-4 bg-blue-950')} />
           <h2 className={cn('text-2xl font-medium')}>SOBRE MIM</h2>
         </div>
-        <div className={cn('mt-2 flex gap-8')}>
-          <div className={cn('flex w-3/4 flex-col gap-2')}>
+        <div className={cn('mt-4 flex flex-col gap-6 xl:flex-row xl:gap-8')}>
+          <div className={cn('flex flex-col gap-2 xl:w-3/5')}>
             <p className={cn('text-gray-700')}>
               Sou desenvolvedor Full Stack e bacharel em Ciência da Computação,
               com experiência no desenvolvimento e manutenção de sistemas,
@@ -38,12 +38,16 @@ export function AboutMe() {
               vendas, usuários e financeiro.
             </p>
           </div>
-          <div className={cn('grid grid-cols-2 gap-4')}>
+          <div
+            className={cn(
+              'grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 xl:flex-1',
+            )}
+          >
             {aboult.map((ab) => (
               <div
                 key={ab.title}
                 className={cn(
-                  'flex h-34 flex-col rounded-md border-1 border-gray-200',
+                  'flex min-h-32 flex-col rounded-md border-1 border-gray-200',
                   'bg-gray-50 p-4 text-blue-950 hover:border-blue-300',
                 )}
               >

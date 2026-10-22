@@ -24,14 +24,14 @@ export function Project() {
           Projetos que desenvolvi aplicando boas práticas, foco em performace e
           uma experiência de uso simples e eficiente.
         </p>
-        <div className={cn('flex gap-4')}>
+        <div className={cn('grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3')}>
           {projects.map((project) => (
             <Link
               key={project.title}
               href={project.link}
               target="_blank"
               className={cn(
-                'relative flex w-105 flex-col gap-2 overflow-hidden rounded-2xl',
+                'relative flex min-w-0 flex-col gap-2 overflow-hidden rounded-2xl',
                 'shadow-[0_0_6px_1px_rgba(0,0,0,0.5)] hover:border-1 hover:border-white/30',
               )}
             >
@@ -49,16 +49,17 @@ export function Project() {
               )}
               <Image
                 src={project.image}
-                width={420}
+                width={840}
                 height={420}
                 alt={project.title}
+                className="h-auto w-full object-cover"
               />
               <div className={cn('flex flex-col gap-2 p-2')}>
                 <h4 className={cn('text-md font-bold')}>{project.title}</h4>
                 <p className={cn('text-sm text-gray-200')}>
                   {project.description}
                 </p>
-                <div className={cn('flex gap-2')}>
+                <div className={cn('flex flex-wrap gap-2')}>
                   {project.tecnology.map((tech) => (
                     <div
                       key={tech}

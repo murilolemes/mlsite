@@ -26,18 +26,18 @@ export function Tecnology() {
           Tecnologias e ferramentas que fazem parte do meu dia a dia e que
           utilizo para construir soluções modernas e escaláveis.
         </p>
-        <div className={cn('flex gap-2 py-4')}>
+        <div className={cn('grid grid-cols-2 gap-3 py-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8')}>
           {tecnologies.map((tech) => (
             <div
               key={tech.name}
               className={cn(
-                'flex w-40 flex-col items-center justify-center gap-4',
+                'flex min-w-0 flex-col items-center justify-center gap-3',
                 'rounded-xl border-1 border-gray-200 bg-white p-4 hover:border-blue-300',
                 'transition-all duration-300 hover:scale-104 hover:transform-gpu',
               )}
             >
-              <Image src={tech.icon} width={48} height={48} alt={tech.name} />
-              <p>{tech.name}</p>
+              <Image src={tech.icon} width={48} height={48} alt={tech.name} className="h-10 w-10 sm:h-12 sm:w-12" />
+              <p className="text-center text-xs sm:text-sm">{tech.name}</p>
             </div>
           ))}
         </div>

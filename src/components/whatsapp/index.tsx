@@ -32,6 +32,7 @@ type ButtonWhatsAppProps = Readonly<{
   py: string;
   bg: string;
   borderColor: string;
+  className?: string;
   children: React.ReactNode;
 }>;
 export function ButtonWhatsApp({
@@ -39,6 +40,7 @@ export function ButtonWhatsApp({
   py,
   bg,
   borderColor,
+  className,
   children,
 }: ButtonWhatsAppProps) {
   return (
@@ -51,6 +53,7 @@ export function ButtonWhatsApp({
         `rounded-md ${bg} px-8 ${py} font-semibold ${textColor}`,
         `${borderColor} flex items-center gap-2 border-1`,
         'transition-all duration-200 hover:border-blue-500',
+        className,
       )}
     >
       {children}

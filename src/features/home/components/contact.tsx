@@ -17,8 +17,8 @@ export function Contact() {
           <Separator className={cn('!w-4 bg-blue-950')} />
           <h2 className={cn('text-2xl font-medium')}>CONTATO</h2>
         </div>
-        <div className={cn('mt-2 flex items-center gap-8')}>
-          <div className={cn('flex w-3/4 flex-col gap-2')}>
+        <div className={cn('mt-4 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-8')}>
+          <div className={cn('flex flex-col gap-2 sm:flex-1')}>
             <p className={cn('text-xl font-bold text-gray-700')}>
               Vamos <span className={cn('text-blue-500')}>conversar?</span>
             </p>
