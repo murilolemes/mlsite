@@ -2,19 +2,26 @@
 
 import { cn } from '@/lib/utils';
 import { ArrowUpIcon } from '@phosphor-icons/react';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { Button } from '../ui/button';
 
 export default function Top() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const updateVisibility = () => setIsVisible(window.scrollY > 0);
+    const updateVisibility = () => {
+      setIsVisible(window.scrollY > 0);
+    };
 
     updateVisibility();
-    window.addEventListener('scroll', updateVisibility, { passive: true });
 
-    return () => window.removeEventListener('scroll', updateVisibility);
+    window.addEventListener('scroll', updateVisibility, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener('scroll', updateVisibility);
+    };
   }, []);
 
   if (!isVisible) {
@@ -22,16 +29,24 @@ export default function Top() {
   }
 
   return (
-    <Link
-      href="#top"
+    <Button
+      type="button"
       aria-label="Voltar ao topo"
+      onClick={() =>
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        })
+      }
       className={cn(
-        'h-12 w-12 rounded-full border-none bg-blue-500 text-gray-50',
-        'fixed bottom-4 left-4 flex items-center justify-center',
-        'transition-colors duration-200 hover:bg-blue-500/80',
+        'fixed bottom-4 left-4 z-50',
+        'flex h-12 w-12 items-center justify-center',
+        'rounded-full border-none bg-blue-500 text-gray-50',
+        'hover/80 transition-colors duration-200',
+        'focus-visible focus-visible',
       )}
     >
       <ArrowUpIcon size={24} weight="bold" />
-    </Link>
+    </Button>
   );
 }
