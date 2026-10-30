@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import { Inter, Montserrat } from 'next/font/google';
 
@@ -45,6 +46,7 @@ export default function RootLayout({
       >
         <Providers>{children}</Providers>
       </body>
+      <Analytics />
     </html>
   );
 }
